@@ -1,9 +1,10 @@
 FROM ubuntu
 
 RUN apt-get update
-RUN apt-get install vim sudo curl -y
+RUN apt-get install sudo curl -y
 
 RUN useradd -m -s /bin/bash -G sudo coder
+RUN useradd -m -s /bin/bash -G sudo abc
 USER coder
 
 # Let's add a fancy prompt!
